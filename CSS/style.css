@@ -1,0 +1,183 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Noto Sans Display', sans-serif;
+    font-weight: 200;
+    padding: 0;
+    background-color: #fff; /* Default background for the index page */
+    color: #333;
+}
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    padding: 1rem 2rem; /* Adjust padding as needed */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    color: #fff;
+    box-sizing: border-box; /* Ensure padding doesn't cause overflow */
+}
+
+header .logo {
+    margin-right: auto; /* Ensures the logo stays on the left */
+    white-space: nowrap; /* Prevents text wrapping for the logo */
+}
+
+header .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem; /* Increased spacing for better layout */
+    margin: 0; /* Removes any default margins */
+    padding: 0; /* Removes any default paddings */
+}
+
+header .nav-links li {
+    display: inline-block; /* Ensures proper alignment */
+}
+
+header .nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 300;
+    font-size: 1rem; /* Adjust size if needed */
+    white-space: nowrap; /* Ensures no text gets cut off */
+}
+
+header .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box; /* Ensures proper spacing */
+}
+
+
+/* Hero Section */
+
+#hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#hero video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    z-index: 1;
+}
+
+.hero-text h1 {
+    font-size: 4rem;
+    margin: 0;
+}
+
+.hero-text p {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+/* Vision Section */
+#vision {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: #000;
+    color: #fff;
+}
+
+#vision .vision-left {
+    width: 50%;
+    padding-right: 2rem;
+}
+
+#vision .vision-left h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+#vision .vision-left p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+#vision .vision-right {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#vision .vision-right img {
+    max-width: 100%;
+    height: auto;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Projects Section */
+#portfolio {
+    padding: 2rem;
+    background-color: #fff;
+}
+
+.project {
+    margin-bottom: 2rem;
+}
+
+.project img {
+    width: 100%;
+}
+
+.project .btn {
+    display: inline-block;
+    background: #000;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 400;
+}
+
+/* Footer */
+footer {
+    background: #000;
+    color: #fff;
+    padding: 1rem 2rem;
+    text-align: center;
+}
+
+footer .btn {
+    background: #fff;
+    color: #000;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 400;
+}
+
+footer .social-links img {
+    width: 24px;
+    margin: 0 0.5rem;
+}
