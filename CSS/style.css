@@ -1,26 +1,32 @@
-/* General Styles */
-body {
-    margin: 0;
-    font-family: 'Noto Sans Display', sans-serif;
-    font-weight: 200;
-    padding: 0;
-    background-color: #fff; /* Default background for the index page */
-    color: #333;
+/* Layout styling */
+.container {
+    padding: 0 25px;
+    
 }
-
-/* Header */
+selector {
+    box-sizing: border-box;
+}
+.row {
+    margin: 0 25px;
+  }
+  /* Header */
 header {
     position: fixed;
+    list-style-type: none;
+    padding: 0;
     top: 0;
     width: 100%;
+    height: auto;
     z-index: 10;
     padding: 1rem 2rem; /* Adjust padding as needed */
-    display: flex;
     justify-content: space-between;
     align-items: center;
     background: transparent;
     color: #fff;
     box-sizing: border-box; /* Ensure padding doesn't cause overflow */
+}
+nav > ul > li {
+    display: inline-block;
 }
 
 header .logo {
@@ -33,16 +39,12 @@ header .nav-links {
     display: flex;
     gap: 1.5rem; /* Increased spacing for better layout */
     margin: 0; /* Removes any default margins */
-    padding: 0; /* Removes any default paddings */
-}
-
-header .nav-links li {
-    display: inline-block; /* Ensures proper alignment */
 }
 
 header .nav-links li a {
-    text-decoration: none;
-    color: white;
+    padding: 0 3px;
+    text-transform: none;
+    color: rgb(165, 240, 226);
     font-weight: 300;
     font-size: 1rem; /* Adjust size if needed */
     white-space: nowrap; /* Ensures no text gets cut off */
@@ -57,6 +59,40 @@ header .navbar {
 }
 
 
+/* General Styles */
+
+body {
+    margin: 0;
+    font-family: 'Anek Malayalam', sans-serif;
+    font-weight: 100;
+    padding: 0;
+    background-color: #fff; /* Default background for the index page */
+    color: #333;
+}
+/* About Me Section - Two Columns */
+#about-me {
+    background-color:rgba(255,249,227,255);
+    color: rgba(0,0,0,255);
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    height: 100
+}
+ 
+/* Left Column - Text Content */
+#about-me .container {
+    width: 60%
+}
+
+/* Right Column - Image (Stays Inside Section) */
+.about-image {
+    position: right; /* Keeps image inside the section */
+    padding: 2rem;
+    margin-top: 100px;
+    margin-bottom: 70px;
+    width: 40%; /* Image takes 40% of the screen width */
+    height: 100%
+}
 /* Hero Section */
 
 #hero {
@@ -98,7 +134,7 @@ header .navbar {
 /* Vision Section */
 #vision {
     display: flex;
-    height: 100vh;
+    height: 100;
     align-items: center;
     justify-content: space-between;
     padding: 2rem;
@@ -107,8 +143,9 @@ header .navbar {
 }
 
 #vision .vision-left {
-    width: 50%;
+    width: 60%;
     padding-right: 2rem;
+    margin-left: 2rem;
 }
 
 #vision .vision-left h2 {
@@ -122,9 +159,8 @@ header .navbar {
 }
 
 #vision .vision-right {
-    width: 50%;
+    width: 40%;
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
@@ -160,25 +196,36 @@ html {
     border-radius: 4px;
     font-weight: 400;
 }
-
 /* Footer */
 footer {
+    position: relative;
     background: #000;
     color: #fff;
     padding: 1rem 2rem;
     text-align: center;
+    margin: auto;
 }
 
 footer .btn {
-    background: #fff;
-    color: #000;
+    background: #adcfda;
+    color: #424242;
     padding: 0.5rem 1rem;
     text-decoration: none;
-    border-radius: 4px;
+    border-radius: 5px;
     font-weight: 400;
 }
 
 footer .social-links img {
     width: 24px;
     margin: 0 0.5rem;
+}
+a {
+    color: #3498db; /* Blue color */
+    text-decoration: none; /* No underline */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+a:hover {
+    color: #1f8f88; /* Darker blue when hovered */
+    text-decoration: underline; /* Underline when hovered */
 }
