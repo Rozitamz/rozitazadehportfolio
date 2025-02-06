@@ -33,6 +33,10 @@ header .logo {
     margin-right: auto; /* Ensures the logo stays on the left */
     white-space: nowrap; /* Prevents text wrapping for the logo */
 }
+header .logo img {
+    max-width: 65px; /* Adjust size as needed */
+    height: auto; /* Maintains aspect ratio */
+}
 
 header .nav-links {
     list-style: none;
@@ -44,7 +48,7 @@ header .nav-links {
 header .nav-links li a {
     padding: 0 3px;
     text-transform: none;
-    color: rgb(165, 240, 226);
+    color: rgb(85, 85, 86);
     font-weight: 300;
     font-size: 1rem; /* Adjust size if needed */
     white-space: nowrap; /* Ensures no text gets cut off */
@@ -228,4 +232,11 @@ a {
 a:hover {
     color: #1f8f88; /* Darker blue when hovered */
     text-decoration: underline; /* Underline when hovered */
+}
+.home-page .nav-links a[href="index.html"] {
+    color: white;
+}
+
+.about-page .nav-links a[href="about.html"] {
+    color: rgb(224, 49, 227);
 }
