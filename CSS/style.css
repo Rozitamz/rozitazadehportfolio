@@ -1,19 +1,33 @@
-/* Layout styling */
-.container {
-    padding: 0 25px;
-    
+/* General Styles */
+html {
+    scroll-behavior: smooth;
 }
-selector {
+
+body {
+    margin: 0;
+    font-family: 'Anek Malayalam', sans-serif;
+    font-weight: 100;
+    font-size: 16px;
+    background-color: #fff; /* Default background for the index page */
+    color: #333;
+}
+
+* {
     box-sizing: border-box;
 }
+
+/* Layout styling */
+.container {
+    padding: 0 10px;
+}
+
 .row {
     margin: 0 25px;
-  }
-  /* Header */
+}
+
+/* Header */
 header {
     position: fixed;
-    list-style-type: none;
-    padding: 0;
     top: 0;
     width: 100%;
     height: auto;
@@ -25,6 +39,7 @@ header {
     color: #fff;
     box-sizing: border-box; /* Ensure padding doesn't cause overflow */
 }
+
 nav > ul > li {
     display: inline-block;
 }
@@ -33,6 +48,7 @@ header .logo {
     margin-right: auto; /* Ensures the logo stays on the left */
     white-space: nowrap; /* Prevents text wrapping for the logo */
 }
+
 header .logo img {
     max-width: 65px; /* Adjust size as needed */
     height: auto; /* Maintains aspect ratio */
@@ -62,43 +78,7 @@ header .navbar {
     box-sizing: border-box; /* Ensures proper spacing */
 }
 
-
-/* General Styles */
-
-body {
-    margin: 0;
-    font-family: 'Anek Malayalam', sans-serif;
-    font-weight: 100;
-    padding: 0;
-    background-color: #fff; /* Default background for the index page */
-    color: #333;
-}
-/* About Me Section - Two Columns */
-#about-me {
-    background-color:rgba(255,249,227,255);
-    color: rgba(0,0,0,255);
-    display: flex;
-    align-items: center;
-    padding: 2rem;
-    height: 100
-}
- 
-/* Left Column - Text Content */
-#about-me .container {
-    width: 60%
-}
-
-/* Right Column - Image (Stays Inside Section) */
-.about-image {
-    position: right; /* Keeps image inside the section */
-    padding: 2rem;
-    margin-top: 100px;
-    margin-bottom: 70px;
-    width: 40%; /* Image takes 40% of the screen width */
-    height: 100%
-}
 /* Hero Section */
-
 #hero {
     position: relative;
     height: 100vh;
@@ -133,6 +113,31 @@ body {
 .hero-text p {
     font-size: 1.5rem;
     margin-top: 1rem;
+}
+
+/* About Me Section - Keeping Your Original Code */
+#about-me {
+    background-color: rgba(255,249,227,255);
+    color: rgba(0,0,0,255);
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    height: 100;
+}
+
+/* Left Column - Text Content */
+#about-me .container {
+    width: 60%;
+}
+
+/* Right Column - Image (Stays Inside Section) */
+.about-image {
+    position: right; /* Keeps image inside the section */
+    padding: 2rem;
+    margin-top: 100px;
+    margin-bottom: 70px;
+    width: 40%; /* Image takes 40% of the screen width */
+    height: 100%;
 }
 
 /* Vision Section */
@@ -173,10 +178,6 @@ body {
     height: auto;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 /* Projects Section */
 #portfolio {
     padding: 2rem;
@@ -187,7 +188,7 @@ html {
     margin-bottom: 2rem;
 }
 
-.project img {
+project img {
     width: 100%;
 }
 
@@ -200,6 +201,7 @@ html {
     border-radius: 4px;
     font-weight: 400;
 }
+
 /* Footer */
 footer {
     position: relative;
@@ -223,6 +225,8 @@ footer .social-links img {
     width: 24px;
     margin: 0 0.5rem;
 }
+
+/* Links */
 a {
     color: #3498db; /* Blue color */
     text-decoration: none; /* No underline */
@@ -233,6 +237,8 @@ a:hover {
     color: #1f8f88; /* Darker blue when hovered */
     text-decoration: underline; /* Underline when hovered */
 }
+
+/* Navigation Link Colors for Active Pages */
 .home-page .nav-links a[href="index.html"] {
     color: white;
 }
@@ -240,3 +246,50 @@ a:hover {
 .about-page .nav-links a[href="about.html"] {
     color: rgb(224, 49, 227);
 }
+
+/* ==============================
+   Medium devices (640px and larger)
+================================= */
+@media only screen and (min-width: 640px) {
+    /* Add styles for tablets and small desktops */
+}
+
+/* ==============================
+   Large devices (1024px or larger)
+================================= */
+@media only screen and (min-width: 1024px) {
+    /* Add styles for larger desktops */
+}
+
+/* ==============================
+   X-large devices (1440px or larger)
+================================= */
+@media only screen and (min-width: 1440px) {
+    /* Add styles for extra-large screens */
+}
+
+/* ==============================
+   Extra-large devices (1920px or larger)
+================================= */
+@media only screen and (min-width: 1920px) {
+    /* Add styles for ultra-wide screens */
+}
+
+@keyframes color-change {
+    0% {fill: #edc655;}
+    50% {fill: #fcffad;}
+    100% {fill: #f76414;}
+  }
+
+  .sun {
+    animation-duration: 4s;
+    animation-name: color-change;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+  }
+
+  @keyframes cloud-move {
+    from {transform: translate(0,50px);}
+    to {transform: translate(200px,50px);}
+  }
