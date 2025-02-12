@@ -4,7 +4,7 @@ html {
 }
 
 body {
-    margin: 0;
+    margin: 5;
     font-family: 'Anek Malayalam', sans-serif;
     font-weight: 100;
     font-size: 16px;
@@ -17,6 +17,7 @@ body {
 }
 
 /* Layout styling */
+
 .container {
     padding: 0 10px;
 }
@@ -27,18 +28,18 @@ body {
 
 /* Header */
 header {
+    text-align: unset;
     position: fixed;
-    top: 0;
+    margin: 5px; /* Corrected margin */
+    padding: 20px; /* Corrected unit */
     width: 100%;
     height: auto;
-    z-index: 10;
-    padding: 1rem 2rem; /* Adjust padding as needed */
-    justify-content: space-between;
-    align-items: center;
+    z-index: 8;
+    display: flex;
     background: transparent;
     color: #fff;
-    box-sizing: border-box; /* Ensure padding doesn't cause overflow */
 }
+
 
 nav > ul > li {
     display: inline-block;
@@ -64,7 +65,7 @@ header .nav-links {
 header .nav-links li a {
     padding: 0 3px;
     text-transform: none;
-    color: rgb(85, 85, 86);
+    color: rgb(157, 157, 157);
     font-weight: 300;
     font-size: 1rem; /* Adjust size if needed */
     white-space: nowrap; /* Ensures no text gets cut off */
@@ -115,68 +116,66 @@ header .navbar {
     margin-top: 1rem;
 }
 
-/* About Me Section - Keeping Your Original Code */
+
+/* Ensure About Me Section Starts Below Fixed Header */
 #about-me {
-    background-color: rgba(255,249,227,255);
-    color: rgba(0,0,0,255);
+    background-color: rgb(106, 106, 106);
+    color: rgb(230, 230, 230);
     display: flex;
+    flex-direction: column; /* Stack image and text in a column */
     align-items: center;
-    padding: 2rem;
-    height: 100;
+    text-align: center;
+    padding: 6rem 6rem 6rem; /* Add top padding equal to header height */
 }
 
-/* Left Column - Text Content */
-#about-me .container {
-    width: 60%;
-}
-
-/* Right Column - Image (Stays Inside Section) */
+/* Image on Top */
 .about-image {
-    position: right; /* Keeps image inside the section */
-    padding: 2rem;
-    margin-top: 100px;
-    margin-bottom: 70px;
-    width: 40%; /* Image takes 40% of the screen width */
-    height: 100%;
+    width: 100%;
+    padding: 5px;
+    max-width: 600px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 1.5rem; /* Space between image and text */
 }
 
-/* Vision Section */
+
+/* Vision Section - Mobile First (1 Column, Image on Top, Centered) */
 #vision {
     display: flex;
-    height: 100;
+    flex-direction: column; /* Stack items vertically */
     align-items: center;
-    justify-content: space-between;
-    padding: 2rem;
+    text-align: center; /* Center-align text */
+    padding: 3rem;
     background-color: #000;
     color: #fff;
 }
 
+#vision .vision-right {
+    width: 100%; /* Image takes full width */
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem; /* Space below image */
+}
+
+#vision .vision-right img {
+    max-width: 90%; /* Image responsive but not too large */
+    height: auto;
+}
+
 #vision .vision-left {
-    width: 60%;
-    padding-right: 2rem;
-    margin-left: 2rem;
+    width: 100%; /* Full width for text */
+    padding: 0 1.5rem;
 }
 
 #vision .vision-left h2 {
-    font-size: 2.5rem;
+    font-size: 2rem; /* Adjust for mobile readability */
     margin-bottom: 1rem;
 }
 
 #vision .vision-left p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     line-height: 1.6;
 }
 
-#vision .vision-right {
-    width: 40%;
-    display: flex;
-    align-items: center;
-}
-
-#vision .vision-right img {
-    max-width: 100%;
-    height: auto;
-}
 
 /* Projects Section */
 #portfolio {
@@ -188,18 +187,34 @@ header .navbar {
     margin-bottom: 2rem;
 }
 
-project img {
-    width: 100%;
+.project img {
+    width: 80%; /* Makes it responsive */
+    max-width: 100vw; /* Prevents exceeding screen width */
+    max-height: 100vh; /* Prevents exceeding screen height */
+    height: auto; /* Maintains aspect ratio */
+    padding: 2px;
+    margin-bottom: 1.5rem; /* Space between image and text */
+    object-fit: contain; /* Ensures full image is visible */
+    align-self: center;
 }
 
 .project .btn {
     display: inline-block;
-    background: #000;
-    color: #fff;
-    padding: 0.5rem 1rem;
+    background-color: #ffd500;
+    color: rgb(0, 0, 0);
+    font-weight: 200;
+    font-size: 14px;
     text-decoration: none;
-    border-radius: 4px;
-    font-weight: 400;
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: 1px solid black; /* Solid black border */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover Effect: Moves Up & Solid Black Shadow */
+.project .btn:hover {
+    transform: translateY(-5px); /* Moves the button slightly up */
+    box-shadow: 0px 5px 0px black; /* Solid black shadow directly underneath */
 }
 
 /* Footer */
@@ -213,13 +228,24 @@ footer {
 }
 
 footer .btn {
-    background: #adcfda;
-    color: #424242;
-    padding: 0.5rem 1rem;
+    display: inline-block;
+    background-color: #ffd500;
+    color: rgb(0, 0, 0);
+    font-weight: 200;
+    font-size: 14px;
     text-decoration: none;
-    border-radius: 5px;
-    font-weight: 400;
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: 1px solid black; /* Solid black border */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
+/* Hover Effect: Moves Up & Solid Black Shadow */
+footer .btn:hover {
+    transform: translateY(-5px); /* Moves the button slightly up */
+    box-shadow: 0px 5px 0px #2979ae; /* Solid black shadow directly underneath */
+}
+
 
 footer .social-links img {
     width: 24px;
@@ -240,25 +266,51 @@ a:hover {
 
 /* Navigation Link Colors for Active Pages */
 .home-page .nav-links a[href="index.html"] {
-    color: white;
+    color: #ffd500;
 }
 
 .about-page .nav-links a[href="about.html"] {
-    color: rgb(224, 49, 227);
+    color: #ffd500;
 }
 
 /* ==============================
-   Medium devices (640px and larger)
+   Medium devices (768px and larger)
 ================================= */
-@media only screen and (min-width: 640px) {
-    /* Add styles for tablets and small desktops */
+@media only screen and (min-width: 768px) {
+        header {
+          text-align: unset;
+          padding: 20px 5 10px;
+        }
+      
+        nav {
+          width: auto;
+          float: right;
+          margin-top: 4px;
+        }
+
+ #vision {
+    flex-direction: row; /*switch to side-by-side */
+    justify-content: space-between;
+    text-align: left; /*reset text alignment */
+    padding: 10rem; /*restore larger padding */
+ }
+
+ #vision .vision-left{
+    width: 60%;
+    padding-right: 2rem;
+    margin-left: 2rem;
+ }
+
+ #vision .vision-right img {
+    max-width: 100%;
+ }
+
 }
 
 /* ==============================
    Large devices (1024px or larger)
 ================================= */
 @media only screen and (min-width: 1024px) {
-    /* Add styles for larger desktops */
 }
 
 /* ==============================
@@ -274,22 +326,3 @@ a:hover {
 @media only screen and (min-width: 1920px) {
     /* Add styles for ultra-wide screens */
 }
-
-@keyframes color-change {
-    0% {fill: #edc655;}
-    50% {fill: #fcffad;}
-    100% {fill: #f76414;}
-  }
-
-  .sun {
-    animation-duration: 4s;
-    animation-name: color-change;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    animation-timing-function: linear;
-  }
-
-  @keyframes cloud-move {
-    from {transform: translate(0,50px);}
-    to {transform: translate(200px,50px);}
-  }
