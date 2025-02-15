@@ -137,9 +137,6 @@ header .navbar {
     gap: 2rem;
 }
 
-.about-image {
-    width: 40%;
-}
 
 .about-image img {
     max-width: 100%;
@@ -159,6 +156,15 @@ header .navbar {
     font-size: 1rem;
     color: rgb(55, 55, 55);
 }
+
+.about-image {
+    width: 100%;
+    padding: 2px;
+    max-width: 600px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 1.5rem; /* Space between image and text */
+}
+
 
 .btn {
     display: inline-block;
@@ -217,26 +223,6 @@ header .navbar {
     list-style-type: circle;
     color: #666;
 }
-
-
---
-
-.about-image {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-
-/* Image on Top */
-.about-image {
-    width: 100%;
-    padding: 5px;
-    max-width: 600px; /* Adjust size as needed */
-    height: auto; /* Maintain aspect ratio */
-    margin-bottom: 1.5rem; /* Space between image and text */
-}
-
 
 /* Vision Section - Mobile First (1 Column, Image on Top, Centered) */
 #vision {
@@ -413,7 +399,25 @@ a:hover {
     max-width: 100%;
  }
 
+ #about {
+    flex-direction: row; /*switch to side-by-side */
+    justify-content: space-between;
+    text-align: left; /*reset text alignment */
+    padding: 10rem; /*restore larger padding */
+ }
+
+ #about .about-right{
+    width: 60%;
+    padding-right: 2rem;
+    margin-left: 2rem;
+ }
+
+ #about .about-left img {
+    max-width: 100%;
+ }
+
 }
+
 
 /* ==============================
    Large devices (1024px or larger)
