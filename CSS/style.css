@@ -117,54 +117,62 @@ header .navbar {
 }
 
 
-/* Ensure About Me Section Starts Below Fixed Header */
-
-/* About Me Section */
-
+/* About Me Section - Default Layout for Desktop (Image Left, Text Right) */
 #about-me {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    color: rgb(230, 230, 230);
-    padding: 3rem 2rem;
-}
-
-.about-container {
-    display: flex;
-    align-items: center;
-    max-width: 1000px;
     gap: 2rem;
+    padding: 3rem;
+    background-color: #ffffff;
+    color: rgb(51, 51, 51);
+    text-align: left; /* Align text properly */
 }
 
+/* Image on Left, Takes 40% Width */
+.about-left {
+    flex: 40%;
+    display: flex;
+    justify-content: center;
+}
 
-.about-image img {
+.about-left img {
     max-width: 100%;
+    height: auto;
     border-radius: 8px;
 }
 
-.about-content {
-    width: 60%;
+/* Text on Right, Takes 60% Width */
+.about-right {
+    flex: 60%;
+    padding: 1rem 2rem;
 }
 
-.about-content h1 {
+.about-right h2 {
     font-size: 2rem;
-    color: #0a0a0a;
+    margin-bottom: 1rem;
 }
 
-.about-content p {
+.about-right p {
     font-size: 1rem;
-    color: rgb(55, 55, 55);
+    line-height: 1.6;
 }
 
-.about-image {
-    width: 100%;
-    padding: 2px;
-    max-width: 600px; /* Adjust size as needed */
-    height: auto; /* Maintain aspect ratio */
-    margin-bottom: 1.5rem; /* Space between image and text */
-}
+/* Responsive Design - Mobile First (Image Stacks on Top) */
+@media (max-width: 768px) {
+    #about-me {
+        flex-direction: column; /* Stack items vertically */
+        text-align: center; /* Center text for better readability */
+    }
 
+    .about-left, .about-right {
+        width: 100%; /* Full width on mobile */
+    }
+
+    .about-left img {
+        max-width: 80%; /* Reduce image size on smaller screens */
+    }
+}
 
 .btn {
     display: inline-block;
