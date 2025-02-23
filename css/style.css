@@ -8,7 +8,8 @@ body {
     font-family: 'Anek Malayalam', sans-serif;
     font-weight: 100;
     font-size: 16px;
-    background-color: #fff; /* Default background for the index page */
+    background-color: #fff;
+    /* Default background for the index page */
     color: #333;
 }
 
@@ -22,16 +23,24 @@ body {
     padding: 0 10px;
 }
 
-.row {
-    margin: 0 25px;
+[class*="col-"] {
+    float: left;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
 }
 
 /* Header */
 header {
     text-align: unset;
     position: fixed;
-    margin: 5px; /* Corrected margin */
-    padding: 20px; /* Corrected unit */
+    margin: 5px;
+    /* Corrected margin */
+    padding: 20px;
+    /* Corrected unit */
     width: 100%;
     height: auto;
     z-index: 8;
@@ -41,25 +50,31 @@ header {
 }
 
 
-nav > ul > li {
+nav>ul>li {
     display: inline-block;
 }
 
 header .logo {
-    margin-right: auto; /* Ensures the logo stays on the left */
-    white-space: nowrap; /* Prevents text wrapping for the logo */
+    margin-right: auto;
+    /* Ensures the logo stays on the left */
+    white-space: nowrap;
+    /* Prevents text wrapping for the logo */
 }
 
 header .logo img {
-    max-width: 65px; /* Adjust size as needed */
-    height: auto; /* Maintains aspect ratio */
+    max-width: 65px;
+    /* Adjust size as needed */
+    height: auto;
+    /* Maintains aspect ratio */
 }
 
 header .nav-links {
     list-style: none;
     display: flex;
-    gap: 1.5rem; /* Increased spacing for better layout */
-    margin: 0; /* Removes any default margins */
+    gap: 1.5rem;
+    /* Increased spacing for better layout */
+    margin: 0;
+    /* Removes any default margins */
 }
 
 header .nav-links li a {
@@ -67,8 +82,10 @@ header .nav-links li a {
     text-transform: none;
     color: rgb(157, 157, 157);
     font-weight: 300;
-    font-size: 1rem; /* Adjust size if needed */
-    white-space: nowrap; /* Ensures no text gets cut off */
+    font-size: 1rem;
+    /* Adjust size if needed */
+    white-space: nowrap;
+    /* Ensures no text gets cut off */
 }
 
 header .navbar {
@@ -76,7 +93,8 @@ header .navbar {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    box-sizing: border-box; /* Ensures proper spacing */
+    box-sizing: border-box;
+    /* Ensures proper spacing */
 }
 
 /* Hero Section */
@@ -126,7 +144,8 @@ header .navbar {
     padding: 3rem;
     background-color: #ffffff;
     color: rgb(51, 51, 51);
-    text-align: left; /* Align text properly */
+    text-align: left;
+    /* Align text properly */
 }
 
 /* Image on Left, Takes 40% Width */
@@ -161,16 +180,21 @@ header .navbar {
 /* Responsive Design - Mobile First (Image Stacks on Top) */
 @media (max-width: 768px) {
     #about-me {
-        flex-direction: column; /* Stack items vertically */
-        text-align: center; /* Center text for better readability */
+        flex-direction: column;
+        /* Stack items vertically */
+        text-align: center;
+        /* Center text for better readability */
     }
 
-    .about-left, .about-right {
-        width: 100%; /* Full width on mobile */
+    .about-left,
+    .about-right {
+        width: 100%;
+        /* Full width on mobile */
     }
 
     .about-left img {
-        max-width: 80%; /* Reduce image size on smaller screens */
+        max-width: 80%;
+        /* Reduce image size on smaller screens */
     }
 }
 
@@ -204,23 +228,27 @@ header .navbar {
     gap: 4rem;
 }
 
-.skills, .tools {
+.skills,
+.tools {
     text-align: left;
     width: 45%;
 }
 
-.skills h3, .tools h3 {
+.skills h3,
+.tools h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
     color: #0a0a0a;
 }
 
-.skills ul, .tools ul {
+.skills ul,
+.tools ul {
     list-style-type: none;
     padding: 0;
 }
 
-.skills li, .tools li {
+.skills li,
+.tools li {
     font-size: 1rem;
     color: rgb(55, 55, 55);
     margin-bottom: 5px;
@@ -235,33 +263,40 @@ header .navbar {
 /* Vision Section - Mobile First (1 Column, Image on Top, Centered) */
 #vision {
     display: flex;
-    flex-direction: column; /* Stack items vertically */
+    flex-direction: column;
+    /* Stack items vertically */
     align-items: center;
-    text-align: center; /* Center-align text */
+    text-align: center;
+    /* Center-align text */
     padding: 3rem;
     background-color: #000;
     color: #fff;
 }
 
 #vision .vision-right {
-    width: 100%; /* Image takes full width */
+    width: 100%;
+    /* Image takes full width */
     display: flex;
     justify-content: center;
-    margin-bottom: 2rem; /* Space below image */
+    margin-bottom: 2rem;
+    /* Space below image */
 }
 
 #vision .vision-right img {
-    max-width: 90%; /* Image responsive but not too large */
+    max-width: 90%;
+    /* Image responsive but not too large */
     height: auto;
 }
 
 #vision .vision-left {
-    width: 100%; /* Full width for text */
+    width: 100%;
+    /* Full width for text */
     padding: 0 1.5rem;
 }
 
 #vision .vision-left h2 {
-    font-size: 2rem; /* Adjust for mobile readability */
+    font-size: 2rem;
+    /* Adjust for mobile readability */
     margin-bottom: 1rem;
 }
 
@@ -279,10 +314,11 @@ header .navbar {
 
 .project {
     background-color: rgb(242, 242, 242);
-    margin: 2rem;
+    /* margin: 2rem 0rem; */
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    margin: 1rem;
 }
 
 .fakeimg {
@@ -306,14 +342,17 @@ header .navbar {
     text-decoration: none;
     padding: 10px 15px;
     border-radius: 20px;
-    border: 1px solid black; /* Solid black border */
+    border: 1px solid black;
+    /* Solid black border */
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 /* Hover Effect: Moves Up & Solid Black Shadow */
 .project .btn:hover {
-    transform: translateY(-5px); /* Moves the button slightly up */
-    box-shadow: 0px 5px 0px black; /* Solid black shadow directly underneath */
+    transform: translateY(-5px);
+    /* Moves the button slightly up */
+    box-shadow: 0px 5px 0px black;
+    /* Solid black shadow directly underneath */
 }
 
 /* Footer */
@@ -344,26 +383,34 @@ footer .btn {
     text-decoration: none;
     padding: 10px 15px;
     border-radius: 20px;
-    border: 1px solid black; /* Solid black border */
+    border: 1px solid black;
+    /* Solid black border */
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 /* Hover Effect: Moves Up & Solid Black Shadow */
 footer .btn:hover {
-    transform: translateY(-5px); /* Moves the button slightly up */
-    box-shadow: 0px 5px 0px #2979ae; /* Solid black shadow directly underneath */
+    transform: translateY(-5px);
+    /* Moves the button slightly up */
+    box-shadow: 0px 5px 0px #2979ae;
+    /* Solid black shadow directly underneath */
 }
 
 /* Links */
 a {
-    color: #3498db; /* Blue color */
-    text-decoration: none; /* No underline */
-    transition: color 0.3s ease; /* Smooth color transition */
+    color: #3498db;
+    /* Blue color */
+    text-decoration: none;
+    /* No underline */
+    transition: color 0.3s ease;
+    /* Smooth color transition */
 }
 
 a:hover {
-    color: #1f8f88; /* Darker blue when hovered */
-    text-decoration: underline; /* Underline when hovered */
+    color: #1f8f88;
+    /* Darker blue when hovered */
+    text-decoration: underline;
+    /* Underline when hovered */
 }
 
 /* Navigation Link Colors for Active Pages */
@@ -375,74 +422,92 @@ a:hover {
     color: #ffd500;
 }
 
+.col-sm-12 {
+    width: 100%;
+}
+
+
 /* ==============================
    Medium devices (768px and larger)
 ================================= */
 @media only screen and (min-width: 768px) {
-        header {
-          text-align: unset;
-          padding: 20px 5 10px;
-        }
-      
-        nav {
-          width: auto;
-          float: right;
-          margin-top: 4px;
-        }
+    header {
+        text-align: unset;
+        padding: 20px 5 10px;
+    }
 
- #vision {
-    flex-direction: row; /*switch to side-by-side */
-    justify-content: space-between;
-    text-align: left; /*reset text alignment */
-    padding: 10rem; /*restore larger padding */
- }
+    nav {
+        width: auto;
+        float: right;
+        margin-top: 4px;
+    }
 
- #vision .vision-left{
-    width: 60%;
-    padding-right: 2rem;
-    margin-left: 2rem;
- }
+    #vision {
+        flex-direction: row;
+        /*switch to side-by-side */
+        justify-content: space-between;
+        text-align: left;
+        /*reset text alignment */
+        padding: 10rem;
+        /*restore larger padding */
+    }
 
- #vision .vision-right img {
-    max-width: 100%;
- }
+    #vision .vision-left {
+        width: 60%;
+        padding-right: 2rem;
+        margin-left: 2rem;
+    }
 
- #about {
-    flex-direction: row; /*switch to side-by-side */
-    justify-content: space-between;
-    text-align: left; /*reset text alignment */
-    padding: 10rem; /*restore larger padding */
- }
+    #vision .vision-right img {
+        max-width: 100%;
+    }
 
- #about .about-right{
-    width: 60%;
-    padding-right: 2rem;
-    margin-left: 2rem;
- }
+    #about {
+        flex-direction: row;
+        /*switch to side-by-side */
+        justify-content: space-between;
+        text-align: left;
+        /*reset text alignment */
+        padding: 10rem;
+        /*restore larger padding */
+    }
 
- #about .about-left img {
-    max-width: 100%;
- }
+    #about .about-right {
+        width: 60%;
+        padding-right: 2rem;
+        margin-left: 2rem;
+    }
 
+    #about .about-left img {
+        max-width: 100%;
+    }
+
+    .col-md-6 {
+        width: 50%;
+    }
+
+    .project {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
 }
-
 
 /* ==============================
    Large devices (1024px or larger)
 ================================= */
 @media only screen and (min-width: 1024px) {
+    .col-lg-3 {
+        width: calc(100%/4);
+        /* same as 50% */
+    }
 }
 
 /* ==============================
    X-large devices (1440px or larger)
 ================================= */
-@media only screen and (min-width: 1440px) {
-    
-}
+@media only screen and (min-width: 1440px) {}
 
 /* ==============================
    Extra-large devices (1920px or larger)
 ================================= */
-@media only screen and (min-width: 1920px) {
-    
-}
+@media only screen and (min-width: 1920px) {}
