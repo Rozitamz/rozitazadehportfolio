@@ -16,17 +16,29 @@
 
 <body class="home-page">
     <!-- Header Section -->
-    <header>
-        <nav class="navbar">
-            <h2 class="logo"> <img src="img/rozitalogow.png" alt="rozitalogow"></h2>
-            <ul class="nav-links">
-                <li><a href="index.html">Portfolio</a></li> <!-- Link back to index.html -->
-                <li><a href="about.html">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
 
-    </header>
+<header>
+    <div class="container">
+        <div class="navtoggle" id="myNavtoggle">
+            <h2 class="logo">
+                <img src="img/rozitalogow.png" alt="rozitalogow">
+            </h2>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Portfolio</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#contact" onclick="menuToggle()">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- Hamburger Icon (Custom Image) -->
+            <a href="javascript:void(0);" class="icon" onclick="menuToggle()">
+                <img src="img/vecteezy_circle.png" alt="Menu" class="hamburger-icon">
+            </a>
+        </div>
+    </div>
+</header>
+
+
     <!-- Hero Section with Video Background -->
     <section id="hero" class="full-screen">
         <video autoplay loop muted>

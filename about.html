@@ -18,14 +18,24 @@
 
     <!-- Header Section -->
     <header>
-        <nav class="navbar">
-            <h2 class="logo"> <img src="img/rozitalogob.png" alt="rozitalogob"></h2>
-            <ul class="nav-links">
-                <li><a href="index.html">Portfolio</a></li>
-                <li><a href="about.html">About</a></li><!-- Link to about.html -->
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <div class="navtoggle" id="myNavtoggle">
+                <h2 class="logo">
+                    <img src="img/rozitalogob.png" alt="rozitalogow">
+                </h2>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="index.html">Portfolio</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="#contact" onclick="menuToggle()">Contact</a></li>
+                    </ul>
+                </nav>
+                <!-- Hamburger Icon (Custom Image) -->
+                <a href="javascript:void(0);" class="icon" onclick="menuToggle()">
+                    <img src="img/vecteezy_black.png" alt="Menu" class="hamburger-icon">
+                </a>
+            </div>
+        </div>
     </header>
 
     <!--About Rozita Section-->
