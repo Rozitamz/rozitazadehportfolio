@@ -33,15 +33,16 @@ body {
 
 /* ============= HEADER ============= */
 header {
+    display: fixed;
+    justify-content: space-between; /* Ensures left-right alignment */
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px;
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
     z-index: 1000;
-    padding: 10px 20px;
     background: transparent;  /* No background */
-    align-items: center;
-    justify-content: space-between;
 }
 
 /* Flex container for aligning logo and menu */
@@ -52,6 +53,10 @@ header {
 }
 
 /* Logo */
+.logo {
+    flex: 1; /* Pushes it to the left */
+}
+
 header .logo {
     margin-right: auto; /* Keeps logo on the left */
 }
@@ -83,9 +88,12 @@ header .logo img {
 
 /* ============= HAMBURGER MENU FOR MOBILE ============= */
 .hamburger-icon {
-    width: 40px;
+    width: 35px;
     height: auto;
+    cursor: pointer;
     display: none;
+    top: 25px;
+
 }
 
 /* Mobile: Hide menu and only show hamburger icon */
