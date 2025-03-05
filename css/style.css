@@ -487,3 +487,43 @@ a:hover {
    Extra-large devices (1920px or larger)
 ================================= */
 @media only screen and (min-width: 1920px) {}
+
+
+/* Initial state for animation */
+.about-left img {
+    transform: translateY(-100px);
+    /* Move image up initially */
+    opacity: 0;
+    transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+.about-right {
+    transform: translateX(100px);
+    /* Move text off-screen to the right */
+    opacity: 0;
+    transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+/* When the section is visible, apply these styles */
+.about-visible .about-left img {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.about-visible .about-right {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/* Scroll effect - move elements out */
+.about-left.hide {
+    transform: translateX(-100px);
+    opacity: 0;
+    transition: transform 1s ease-out, opacity 0.5s ease-out;
+}
+
+.about-right.hide {
+    transform: translateX(100px);
+    opacity: 0;
+    transition: transform 1s ease-out, opacity 0.5s ease-out;
+}
