@@ -5,10 +5,10 @@ html {
 
 body {
     margin: 0;
-    font-family: 'Anek Malayalam', sans-serif;
-    font-weight: 100;
+    font-family: 'Bellota Text', sans-serif;
+    font-weight: 300;
     font-size: 16px;
-    background-color: #fff;
+    background-color: #FBFBFB;
     color: #333;
 }
 
@@ -143,10 +143,26 @@ header .logo img {
     object-fit: cover;
     z-index: -1;
 }
+.hero-logo {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    /* Make sure it’s above everything */
+    pointer-events: none;
+    /* So it doesn’t block text clicks if needed */
+}
+
+.hero-logo img {
+    width: 600px;
+    /* Adjust as needed */
+    height: auto;
+}
 
 .hero-text {
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -167,8 +183,71 @@ header .logo img {
     font-size: 2rem;
     margin-top: 2rem;
     font-weight: 400;
-    line-height: 0.5;  /* tighter line spacing */
+    line-height: 1;  /* tighter line spacing */
 }
+
+/* ========== My Vision Section ========== */
+#my-vision {
+    background-color: #000;
+    color: #fff;
+    padding: 6rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 100vh;
+}
+
+/* Title */
+.vision-header {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.vision-header h1 {
+    font-family: 'Elsie', serif;
+    font-size: 3.5rem;
+    color: #ffd500;
+    margin: 0;
+}
+
+/* Two-column layout */
+.vision-columns {
+    display: flex;
+    flex-direction: row;
+    /* left to right */
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    max-width: 1000px;
+    width: 100%;
+    flex-wrap: wrap;
+    /* stack on smaller screens */
+}
+
+/* Left column: TEXT */
+.vision-text {
+    flex: 1;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Right column: GIF */
+.vision-gif {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.vision-gif img {
+    width: 250px;
+    height: auto;
+    max-width: 100%;
+}
+
 
 /* ============= ABOUT ME SECTION ============= */
 #about-me {
@@ -285,64 +364,50 @@ header .logo img {
     color: #fff;
 }
 
-/* ========== VISION SECTION ========== */
-#vision {
-    display: flex;
-    flex-direction: column; /* Stack items vertically */
-    align-items: center;
-    text-align: center; /* Center-align text */
-    padding: 1rem;
-    background-color: #000;
-    color: #fff;
+------------------------------------------------
+/* ========== PORTFOLIO SECTION ========== */
+#portfolio {
+    background-color: #5d5d5d;
+    padding: 6rem 2rem 2rem;
+    position: relative;
+    text-align: center;
 }
 
-#vision .vision-right {
-    width: 100%;
+/* Container for GIFs + Title */
+.portfolio-visuals {
     display: flex;
     justify-content: center;
-    margin-bottom: 2rem; /* Space below image */
+    align-items: center;
+    gap: 2rem;
+    position: relative;
+    z-index: 1;
+    flex-wrap: wrap;
 }
 
-#vision .vision-right img {
-    max-width: 90%;
+/* Background GIFs */
+.gif-left,
+.gif-right {
+    width: 150px;
     height: auto;
 }
 
-#vision .vision-left {
-    width: 100%;
-    padding: 0 1.5rem;
+.portfolio-title {
+    font-family: 'Elsie', serif;
+    font-size: 3.5rem;
+    color: #ffd500;
+    margin: 0;
 }
 
-#vision .vision-left h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-#vision .vision-left p {
-    font-size: 1rem;
-    line-height: 1.6;
-}
-
-/* ========== PROJECT SECTION ========== */
-/* Portfolio Header */
-#portfolio .header {
-    text-align: center; /* Center align */
-    padding: 2rem 1rem;
-}
-
-#portfolio .header h1 {
-    font-size: 2.5rem; /* Larger and bold */
-    font-weight: bold;
-    text-transform: uppercase; /* Optional for a more polished look */
-    margin-bottom: 0.5rem;
-}
-
-#portfolio .header p {
+/* Subheading */
+.portfolio-intro {
+    margin-top: 1.5rem;
     font-size: 1.2rem;
-    color: #555; /* Softer text color for contrast */
+    color: #555;
     max-width: 600px;
-    margin: 0 auto; /* Center the paragraph */
+    margin-left: auto;
+    margin-right: auto;
 }
+-------------------------
 
 #project1 {
     display: flex;
