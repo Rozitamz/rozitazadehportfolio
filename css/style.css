@@ -8,7 +8,7 @@ body {
     font-family: 'Bellota Text', sans-serif;
     font-weight: 300;
     font-size: 16px;
-    background-color: #FBFBFB;
+    background-color: #d5d5d5;
     color: #333;
 }
 
@@ -364,11 +364,10 @@ header .logo img {
     color: #fff;
 }
 
-------------------------------------------------
 /* ========== PORTFOLIO SECTION ========== */
 #portfolio {
     background-color: #5d5d5d;
-    padding: 6rem 2rem 2rem;
+    padding: 8rem 2rem 2rem;
     position: relative;
     text-align: center;
 }
@@ -378,27 +377,34 @@ header .logo img {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
     position: relative;
     z-index: 1;
     flex-wrap: wrap;
 }
 
 /* Background GIFs */
-.gif-left,
-.gif-right {
-    width: 150px;
+
+.gif-left {
+    width: 90px;
     height: auto;
+    margin-bottom: 100px;
+        /* lifts it up */
 }
 
+.gif-right {
+    width: 180px;
+    height: auto;
+    margin-top: 60px;
+        /* pushes it down */
+}
 .portfolio-title {
     font-family: 'Elsie', serif;
     font-size: 3.5rem;
-    color: #ffd500;
+    color: #262626;
     margin: 0;
 }
 
-/* Subheading */
 .portfolio-intro {
     margin-top: 1.5rem;
     font-size: 1.2rem;
@@ -406,81 +412,7 @@ header .logo img {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
-}
--------------------------
-
-#project1 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    text-align: left;
-    padding: 2rem;
-    background-color: #ffffff;
-    color: #474747;
-    gap: 1rem;
-}
-
-/* Left Side - Text & Logo (2/3 width) */
-#project1 .project1-left {
-    width: 66.66%;
-    /* 2/3 of the width */
-    padding: 0 1rem;
-}
-
-/* Logo */
-.project1-left img.png {
-    width: 110px;
-    margin-bottom: 10px;
-}
-
-/* Headings & Text */
-#project1 .project1-left h3 {
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    color: #ffd500;
-    opacity: 0.8;
-}
-
-#project1 .project1-left h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-#project1 .project1-left p {
-    font-size: 1rem;
-    line-height: 1.6;
-}
-
-/* Right Side - Image (1/3 width) */
-#project1 .project1-right {
-    width: 33.33%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#project1 .project1-right img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    #project1 {
-        flex-direction: column;
-        /* Stack items vertically on small screens */
-        text-align: center;
-    }
-
-    #project1 .project1-left,
-    #project1 .project1-right {
-        width: 100%;
-        /* Full width on smaller screens */
-    }
-
-    #project1 .project1-right {
-        margin-top: 0;
-    }
+    text-align: center;
 }
 
 /* Read More Button */
@@ -496,7 +428,6 @@ header .logo img {
     border: 1px solid black;
     transition: transform 0.3s ease, box-shadow 0.2s ease-in-out;
 }
-
 
 /* Hover Effect: Moves Up & Solid Black Shadow */
 .btn:hover {
@@ -522,38 +453,77 @@ header .logo img {
 
 }
 
-.fakeimg {
-    background-color: rgb(255, 213, 0);
-    width: 100%;
-    height: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    font-weight: bold;
-    border-radius: 30px;
-}
-
-/* Ensure the section centers its content */
-#project1 {
+/* === CASE STUDY SECTION === */
+.case-study {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    /* Adjust as needed */
+    padding: 8rem 1rem;
+    /* light background */
 }
 
-/* Container for positioning the button over the image */
-.image-container {
-    position: relative;
-    display: inline-block;
+.case-box {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    max-width: 1500px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 
-/* Style the image to maintain its aspect ratio and responsiveness */
-.image-container img {
-    display: block;
+/* Left image */
+.case-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: #fff;
+}
+
+.case-image img {
     width: 100%;
+    max-width: 500px;
     height: auto;
+}
+
+/* Right content */
+.case-content {
+    flex: 2;
+    padding: 2rem 2.5rem;
+    position: relative;
+    text-align: left;
+}
+
+.case-logo {
+    width: 150px;
+    margin-bottom: 3rem;
+    margin-top: 4rem;
+}
+
+.case-label {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+.case-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #000;
+}
+
+.case-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 2rem;
+    text-align: justify;
 }
 
 /* Project Button */
@@ -578,11 +548,40 @@ header .logo img {
 
 /* ============= FOOTER ============= */
 .footer {
-    background: rgb(0, 0, 0);
+    position: relative;
+    width: 100%;
+    background: #202020;
     color: white;
-    padding: 20px;
+    padding: 60px 40px 20px;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 0px;
+    font-family: 'Bellota Text', sans-serif;
+    border: none;
+}
+.container {
+    width: 100%;
+    max-width: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer .footer-content {
+    position: relative;
+    z-index: 1;
+}
+
+.footer h2 {
+    font-family: 'Elsie', serif;
+    font-size: 2.5rem;
+    color: #ffd500;
+    margin-bottom: 1rem;
+}
+
+.footer p {
+    font-family: 'Bellota Text', sans-serif;
+    font-size: 1rem;
+    color: #eee;
+    margin: 0.5rem 0;
 }
 
 .footer .social-links img {
@@ -607,13 +606,30 @@ footer .btn {
     border-radius: 20px;
     border: 1px solid black;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    font-family: 'Bellota Text', sans-serif;
 }
 
-/* Hover Effect: Moves Up & Solid Black Shadow */
 footer .btn:hover {
     transform: translateY(-5px);
     box-shadow: 0px 5px 0px #ffffff;
 }
+
+/* Center-Right Floating GIF */
+.footer-gif {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    max-width: 320px;
+    opacity: 0.6;
+    z-index: 0;
+}
+
+.footer-gif img {
+    width: 100%;
+    height: auto;
+}
+
 
 /* ========== LINKS ========== */
 a {
