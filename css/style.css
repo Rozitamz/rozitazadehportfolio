@@ -245,16 +245,24 @@ header .logo img {
 }
 
 /* Right column: GIF */
-.vision-gif {
-    flex: 1;
-    display: flex;
-    justify-content: center;
+
+.hover-circle {
+    width: 250px;
+    /* or any size you prefer */
+    height: 250px;
+    border-radius: 50%;
+    /* makes it a circle */
+    object-fit: cover;
+    /* ensures the image fills the circle */
+    filter: grayscale(100%);
+    /* black & white by default */
+    transition: filter 0.4s ease;
+    /* smooth hover transition */
 }
 
-.vision-gif img {
-    width: 250px;
-    height: auto;
-    max-width: 100%;
+.hover-circle:hover {
+    filter: grayscale(0%);
+    /* show color on hover */
 }
 
 /* ============= ABOUT ME SECTION ============= */
