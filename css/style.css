@@ -153,7 +153,7 @@ header .logo img {
 
 .hero-logo {
     position: absolute;
-    top: 30%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
@@ -181,17 +181,17 @@ header .logo img {
 }
 
 .hero-text h1 {
-    font-size: 5rem;
+    font-size: 1rem;
     margin: 0;
-    font-weight: 900;
+    font-weight: 800;
     /* ✅ Use Elsie Black */
 }
 
 .hero-text .typing {
     font-size: 2rem;
     margin-top: 2rem;
-    font-weight: 400;
-    line-height: 1;
+    font-weight: 200;
+    line-height: 0.5;
     /* tighter line spacing */
 }
 
