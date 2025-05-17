@@ -717,11 +717,54 @@ a:hover {
 
 /* ========== RESPONSIVE DESIGN ========== */
 
-/* Medium Devices (768px and larger) */
+/* ---------------------------------------
+   Tablet Portrait (641px – 767px)
+---------------------------------------- */
+@media only screen and (min-width: 641px) and (max-width: 767px) {
+    .hero-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-text .typing {
+        font-size: 1.5rem;
+    }
+
+    .vision-columns {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .case-box {
+        flex-direction: column;
+        padding: 2rem 1rem;
+    }
+
+    .about-container {
+        flex-direction: column;
+        padding: 2rem 1rem;
+    }
+
+    .about-photo,
+    .about-text {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .circle-bg {
+        right: 0;
+        top: 20px;
+        width: 280px;
+        height: 280px;
+    }
+}
+
+/* ---------------------------------------
+   Medium Devices (768px and up)
+---------------------------------------- */
 @media only screen and (min-width: 768px) {
     header {
         text-align: unset;
-        padding: 20px 5 10px;
+        padding: 20px 5px 10px;
     }
 
     nav {
@@ -757,42 +800,58 @@ a:hover {
     }
 }
 
-/* ==============================
-   Large devices (1024px or larger)
-================================= */
+/* ---------------------------------------
+   Large Devices (1024px and up)
+---------------------------------------- */
 @media only screen and (min-width: 1024px) {
     .col-lg-3 {
-        width: calc(100%/4);
+        width: calc(100% / 4);
     }
 }
 
-/* ==============================
-   X-large devices (1440px or larger)
-================================= */
-@media only screen and (min-width: 1440px) {}
+/* ---------------------------------------
+   X-Large Devices (1440px and up)
+---------------------------------------- */
+@media only screen and (min-width: 1440px) {
+    /* Add your custom styles later if needed */
+}
 
-/* ==============================
-   Extra-large devices (1920px or larger)
-================================= */
-@media only screen and (min-width: 1920px) {}
+/* ---------------------------------------
+   XXL Devices (1920px and up)
+---------------------------------------- */
+@media only screen and (min-width: 1920px) {
+    .hero-text h1 {
+        font-size: 2rem;
+    }
 
+    .case-title {
+        font-size: 2rem;
+    }
 
-/* Initial state for animation */
+    .about-text h2 {
+        font-size: 3.2rem;
+    }
+
+    .container {
+        max-width: 1500px;
+    }
+}
+
+/* ---------------------------------------
+   Scroll Animations
+---------------------------------------- */
 .about-left img {
     transform: translateY(-100px);
-    /* Move image up initially */
     opacity: 0;
     transition: transform 1s ease-out, opacity 1s ease-out;
 }
 
 .about-right {
     transform: translateX(100px);
-    /* Move text off-screen to the right */
     opacity: 0;
     transition: transform 1s ease-out, opacity 1s ease-out;
 }
 
-/* When the section is visible, apply these styles */
 .about-visible .about-left img {
     transform: translateY(0);
     opacity: 1;
@@ -803,7 +862,6 @@ a:hover {
     opacity: 1;
 }
 
-/* Scroll effect - move elements out */
 .about-left.hide {
     transform: translateX(-100px);
     opacity: 0;
@@ -816,7 +874,9 @@ a:hover {
     transition: transform 1s ease-out, opacity 0.5s ease-out;
 }
 
+/* ---------------------------------------
+   Active Navigation Link Highlight
+---------------------------------------- */
 .nav-links a.active {
     color: #ffd500;
-    /* Yellow */
 }
