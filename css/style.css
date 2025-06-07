@@ -597,6 +597,13 @@ header .logo img {
     margin-bottom: 3rem;
     margin-top: 4rem;
 }
+.case-logo3 {
+    width: 80px;
+    /* or smaller like 30px */
+    height: auto;
+    margin-bottom: 3rem;
+    margin-top: 4rem;
+}
 
 .case-label {
     font-size: 0.9rem;
