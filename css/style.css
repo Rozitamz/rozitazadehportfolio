@@ -1103,3 +1103,40 @@ a:hover {
 .about-photo .circle-bg {
     animation: slideInRight 1s ease-out forwards;
 }
+
+@media screen and (max-width: 640px) {
+    .portfolio-visuals {
+        flex-wrap: nowrap;
+        /* keep all three in one row */
+        justify-content: space-between;
+        padding: 0 20px;
+        /* space from sides */
+        gap: 0;
+        /* avoid extra spacing pushing items */
+    }
+
+    .gif-left {
+        width: 80px;
+        /* smaller so it doesn't push down */
+        margin-bottom: 0;
+        /* reset big lift */
+    }
+
+    .gif-right {
+        width: 80px;
+        margin-top: 0;
+        /* reset push down */
+    }
+
+    .portfolio-title {
+        font-size: 2rem;
+        /* slightly smaller so it doesn't wrap */
+        margin: 0;
+        /* remove top/bottom excess spacing */
+    }
+
+    html {
+        -webkit-text-size-adjust: 100%;
+        /* stop iOS from resizing text */
+    }
+}
